@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Find crop-care products by crop and growing challenge, and get practical guidance from the CropKind farm assistant."
+    />
+    <meta name="theme-color" content="#f7f8f3" />
+    <title>CropKind — care that starts with the crop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      <span class="announcement-dot" aria-hidden="true"></span>
+      Thoughtful crop care, with a little more confidence
+      <a href="#finder">Find your crop solution <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="CropKind home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none">
+            <path d="M18 29V17M18 22C11.5 22 7 18.4 7 12c6.7-.2 10.7 3 11 10ZM18 18c.5-7 4.7-11 11-11 .3 6.5-3.7 10.5-11 11Z" />
+          </svg>
+        </span>
+        <span class="brand-name">crop<span>kind</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#products">Shop products</a>
+        <a href="#finder">Find by crop</a>
+        <a href="#field-guide">Field guide</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button bag-button" id="bag-open" aria-label="Open shopping bag">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 8h14l1 12H4L5 8Z" />
+            <path d="M9 9V6a3 3 0 0 1 6 0v3" />
+          </svg>
+          <span>Bag</span>
+          <span class="bag-count" id="bag-count" aria-live="polite">0</span>
+        </button>
+        <a class="button button-dark header-cta" href="#finder">Find a solution <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> A little know-how goes a long way</div>
+          <h1 id="hero-heading">Good care.<br /><em>Better growing.</em></h1>
+          <p class="hero-intro">
+            Find thoughtfully selected crop-care products for the challenges you’re seeing in your field.
+            Start with your crop, and we’ll help you explore.
+          </p>
+          <div class="hero-buttons">
+            <a class="button button-dark" href="#finder">Find your crop solution <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#products">Browse all products <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-note">
+            <span class="note-check" aria-hidden="true">✓</span>
+            <span>Label-first guidance. Your local product label always comes first.</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Illustration of a thriving crop growing in a field">
+          <div class="hero-image">
+            <div class="sun-disc"></div>
+            <div class="hero-image-caption"><span>GROW WITH GOOD INTENTIONS</span><span>01 — FIELD NOTES</span></div>
+            <div class="field field-back"></div>
+            <div class="field field-mid"></div>
+            <div class="field field-front"></div>
+            <svg class="hero-plant plant-one" viewBox="0 0 130 245" fill="none" aria-hidden="true">
+              <path d="M67 236C67 182 59 126 69 56" stroke="#2D6043" stroke-width="5" stroke-linecap="round" />
+              <path d="M64 166C41 130 20 125 9 136c8 26 32 39 57 39M67 133c11-36 31-48 48-43-1 27-19 45-48 50m-5-21c-22-27-21-51-6-61 22 17 25 38 14 65" fill="#6A9D61" stroke="#2D6043" stroke-width="3" stroke-linejoin="round" />
+              <path d="M68 94c-1-22-13-30-25-26 1 17 11 27 25 29m4 90c17-28 37-34 51-25-8 22-25 33-51 32" fill="#8EBA76" stroke="#2D6043" stroke-width="3" stroke-linejoin="round" />
+            </svg>
+            <svg class="hero-plant plant-two" viewBox="0 0 130 245" fill="none" aria-hidden="true">
+              <path d="M67 236C67 182 59 126 69 56" stroke="#2D6043" stroke-width="5" stroke-linecap="round" />
+              <path d="M64 166C41 130 20 125 9 136c8 26 32 39 57 39M67 133c11-36 31-48 48-43-1 27-19 45-48 50m-5-21c-22-27-21-51-6-61 22 17 25 38 14 65" fill="#6A9D61" stroke="#2D6043" stroke-width="3" stroke-linejoin="round" />
+              <path d="M68 94c-1-22-13-30-25-26 1 17 11 27 25 29m4 90c17-28 37-34 51-25-8 22-25 33-51 32" fill="#8EBA76" stroke="#2D6043" stroke-width="3" stroke-linejoin="round" />
+            </svg>
+            <div class="field-stamp"><span aria-hidden="true">✳</span><span>ROOTED<br />IN CARE</span></div>
+            <div class="hero-image-credit">A HEALTHIER FIELD STARTS HERE</div>
+          </div>
+          <div class="floating-card">
+            <span class="floating-icon" aria-hidden="true">✳</span>
+            <span><strong>Start with what you see</strong><small>Browse care by crop challenge</small></span>
+            <a href="#field-guide" aria-label="Explore the field guide">↗</a>
+          </div>
+          <div class="hero-index">01 <span>/ 03</span></div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Our approach">
+        <span>GOOD PRACTICE, EVERY STEP</span>
+        <div><span aria-hidden="true">✳</span> Start with the crop</div>
+        <div><span aria-hidden="true">↗</span> Match the challenge</div>
+        <div><span aria-hidden="true">✓</span> Follow the local label</div>
+      </section>
+
+      <section class="finder-section section-wrap" id="finder" aria-labelledby="finder-heading">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow"><span class="eyebrow-line"></span> A better place to begin</span>
+            <h2 id="finder-heading">What’s growing<br class="mobile-break" /> on your mind?</h2>
+          </div>
+          <p>Choose a crop and the challenge you’ve noticed. We’ll show you products to explore—not a substitute for a proper diagnosis or your local label.</p>
+        </div>
+
+        <form class="finder-panel" id="finder-form">
+          <label class="select-field" for="crop-select">
+            <span class="select-number">01</span>
+            <span class="select-label">My crop is</span>
+            <span class="select-wrap">
+              <select id="crop-select" name="crop">
+                <option value="all">Choose a crop</option>
+                <option value="tomato">Tomato</option>
+                <option value="potato">Potato</option>
+                <option value="grape">Grape</option>
+                <option value="cucurbits">Cucurbits</option>
+                <option value="vegetables">Vegetables</option>
+                <option value="field">Field crops</option>
+              </select>
+              <span aria-hidden="true">⌄</span>
+            </span>
+          </label>
+          <span class="finder-divider" aria-hidden="true"></span>
+          <label class="select-field" for="challenge-select">
+            <span class="select-number">02</span>
+            <span class="select-label">I’m noticing</span>
+            <span class="select-wrap">
+              <select id="challenge-select" name="challenge">
+                <option value="all">Choose a challenge</option>
+                <option value="late-blight">Late blight</option>
+                <option value="powdery-mildew">Powdery mildew</option>
+                <option value="aphids">Aphids</option>
+                <option value="caterpillars">Caterpillars</option>
+                <option value="weeds">Weeds</option>
+              </select>
+              <span aria-hidden="true">⌄</span>
+            </span>
+          </label>
+          <button class="button button-lime finder-submit" type="submit">Show me options <span aria-hidden="true">↗</span></button>
+        </form>
+        <p class="finder-feedback" id="finder-feedback" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="products-section section-wrap" id="products" aria-labelledby="products-heading">
+        <div class="products-heading">
+          <div>
+            <span class="eyebrow"><span class="eyebrow-line"></span> A considered selection</span>
+            <h2 id="products-heading">Care for your<br class="mobile-break" /> kind of growing.</h2>
+          </div>
+          <a class="text-link products-all-link" href="#products" id="clear-filters">Explore all products <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="product-controls">
+          <div class="filter-tabs" role="group" aria-label="Filter products by type">
+            <button class="filter-tab active" type="button" data-filter="all" aria-pressed="true">All products <span id="all-count">06</span></button>
+            <button class="filter-tab" type="button" data-filter="fungicide" aria-pressed="false">Fungicides</button>
+            <button class="filter-tab" type="button" data-filter="insecticide" aria-pressed="false">Insect control</button>
+            <button class="filter-tab" type="button" data-filter="herbicide" aria-pressed="false">Weed control</button>
+          </div>
+          <label class="search-box">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.7" cy="8.7" r="5.8"/><path d="m13 13 4 4"/></svg>
+            <input id="product-search" type="search" placeholder="Search products" aria-label="Search products" />
+          </label>
+        </div>
+
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <div class="empty-products" id="empty-products" hidden>
+          <span aria-hidden="true">⌕</span>
+          <strong>No exact match just yet.</strong>
+          <p>Try a broader search or browse all of our products.</p>
+          <button type="button" class="text-link" id="reset-search">Clear filters <span aria-hidden="true">→</span></button>
+        </div>
+        <div class="products-footnote">
+          <span aria-hidden="true">✳</span>
+          Product availability, permitted crops and uses vary by location. Always check and follow your local product label.
+        </div>
+      </section>
+
+      <section class="guide-section" id="field-guide" aria-labelledby="guide-heading">
+        <div class="section-wrap guide-wrap">
+          <div class="guide-intro">
+            <span class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> A note from the field guide</span>
+            <h2 id="guide-heading">Different challenges.<br /><em>Different kinds of care.</em></h2>
+            <p>Not every leaf spot is a fungus, and not every yellow leaf is a pest. Use this guide as a starting point, then confirm what you’re seeing before choosing a treatment.</p>
+            <a class="button button-outline" href="#chat">Ask the farm assistant <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="guide-list">
+            <article class="guide-row">
+              <div class="guide-icon guide-fungus" aria-hidden="true"><span>✳</span></div>
+              <div class="guide-text"><div class="guide-kicker">01 / FUNGAL DISEASES</div><h3>Blights, mildews &amp; leaf spots</h3><p>Fungicides are labeled for specific crops and diseases. Confirm the cause first—some lookalike symptoms need a different response.</p><div class="guide-tags"><span>Late blight</span><span>Powdery mildew</span></div></div>
+              <button class="guide-arrow" type="button" data-challenge="late-blight" aria-label="Browse products for late blight">↗</button>
+            </article>
+            <article class="guide-row">
+              <div class="guide-icon guide-insect" aria-hidden="true"><span>⌁</span></div>
+              <div class="guide-text"><div class="guide-kicker">02 / INSECT PESTS</div><h3>Aphids &amp; chewing caterpillars</h3><p>Check the pest’s identity and life stage. Some options work only when applied at the right stage and with pollinators protected.</p><div class="guide-tags"><span>Aphids</span><span>Armyworm</span></div></div>
+              <button class="guide-arrow" type="button" data-challenge="aphids" aria-label="Browse insect-control products">↗</button>
+            </article>
+            <article class="guide-row">
+              <div class="guide-icon guide-weed" aria-hidden="true"><span>↗</span></div>
+              <div class="guide-text"><div class="guide-kicker">03 / WEED PRESSURE</div><h3>Annual &amp; perennial weeds</h3><p>Crop safety matters. Weed-control products differ widely; only use one if its label permits your crop, timing and application method.</p><div class="guide-tags"><span>Broadleaf</span><span>Grassy weeds</span></div></div>
+              <button class="guide-arrow" type="button" data-challenge="weeds" aria-label="Browse weed-control products">↗</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="chat-cta section-wrap" id="chat">
+        <div class="chat-cta-mark" aria-hidden="true">
+          <div class="chat-orbit orbit-one"></div><div class="chat-orbit orbit-two"></div>
+          <span>ck</span>
+        </div>
+        <div class="chat-cta-copy">
+          <span class="eyebrow"><span class="eyebrow-line"></span> Say hello to your farm assistant</span>
+          <h2>A second opinion,<br /> whenever you need one.</h2>
+          <p>Ask about the symptoms you’re seeing, compare product types, or figure out what to check next. Answers are AI-generated; always verify with a local expert and the product label.</p>
+        </div>
+        <button class="button button-dark" type="button" id="chat-open">Chat with the assistant <span aria-hidden="true">↗</span></button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-top">
+        <a class="brand brand-footer" href="#" aria-label="CropKind home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M18 29V17M18 22C11.5 22 7 18.4 7 12c6.7-.2 10.7 3 11 10ZM18 18c.5-7 4.7-11 11-11 .3 6.5-3.7 10.5-11 11Z" /></svg></span>
+          <span class="brand-name">crop<span>kind</span></span>
+        </a>
+        <p>Good things grow with thoughtful care.</p>
+        <a class="footer-back-top" href="#">Back to top ↑</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CropKind. Made for growers.</span>
+        <span>Educational content only. Always follow the product label and local regulations.</span>
+      </div>
+    </footer>
+
+    <div class="drawer-backdrop" id="bag-backdrop" hidden></div>
+    <aside class="bag-drawer" id="bag-drawer" aria-labelledby="bag-heading" aria-modal="true" role="dialog" hidden>
+      <div class="drawer-header"><div><span class="eyebrow"><span class="eyebrow-line"></span> YOUR FIELD KIT</span><h2 id="bag-heading">Your bag <span id="drawer-count">(0)</span></h2></div><button class="close-button" type="button" id="bag-close" aria-label="Close bag">×</button></div>
+      <div class="bag-items" id="bag-items"></div>
+      <div class="bag-empty" id="bag-empty"><span aria-hidden="true">✳</span><strong>Your bag is taking root.</strong><p>Add a product to keep it here while you explore.</p><button class="button button-dark" id="bag-browse" type="button">Explore products <span aria-hidden="true">→</span></button></div>
+      <div class="bag-summary" id="bag-summary" hidden><div class="bag-total"><span>Estimated total</span><strong id="bag-total"></strong></div><p>This demo does not process orders. Always check local approval and product labels before purchase or use.</p><a class="button button-dark bag-contact" href="mailto:hello@cropkind.example">Ask about these products <span aria-hidden="true">↗</span></a></div>
+    </aside>
+
+    <section class="chat-panel" id="chat-panel" aria-label="CropKind farm assistant" aria-modal="false" role="dialog" hidden>
+      <div class="chat-header">
+        <div class="assistant-avatar" aria-hidden="true"><span>ck</span><span class="online-dot"></span></div>
+        <div class="chat-header-copy"><strong>Your farm assistant</strong><span><i></i> Here to help you think it through</span></div>
+        <button class="chat-close" type="button" id="chat-close" aria-label="Close chat">×</button>
+      </div>
+      <div class="chat-messages" id="chat-messages" aria-live="polite" aria-relevant="additions">
+        <div class="chat-message assistant-message"><span class="message-avatar">ck</span><div class="message-bubble">Hi there! Tell me what crop you’re growing and what you’ve noticed. I can help you explore possibilities and what to check next. <span class="message-time">CROPKIND ASSISTANT</span></div></div>
+        <div class="chat-suggestions" id="chat-suggestions">
+          <button type="button">What might cause spots on tomato leaves?</button>
+          <button type="button">How do I choose between pesticide types?</button>
+        </div>
+      </div>
+      <div class="chat-warning">AI-generated guidance can be wrong. Verify diagnoses and always follow your local product label.</div>
+      <form class="chat-form" id="chat-form">
+        <label class="sr-only" for="chat-input">Message the farm assistant</label>
+        <textarea id="chat-input" placeholder="Describe what you’re seeing…" rows="1" maxlength="1600" required></textarea>
+        <button type="submit" id="chat-send" aria-label="Send message"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 4 17 8-17 8 3-8-3-8Zm3 8h14"/></svg></button>
+      </form>
+    </section>
+    <button class="chat-launcher" id="chat-launcher" type="button" aria-label="Open farm assistant chat">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5 8 8 0 0 1-3.4-.8L4 20l1.7-4.4a7.5 7.5 0 1 1 14.3-4.1Z"/><path d="M8 11.5h.01M12.5 11.5h.01M17 11.5h.01"/></svg>
+      <span>Ask CropKind</span>
+    </button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
